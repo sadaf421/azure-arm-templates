@@ -1,17 +1,13 @@
 {
-    "bindings": [
-        {
-            "webHookType": "",
-            "name": "req",
-            "type": "httpTrigger",
-            "direction": "in",
-            "authLevel": "anonymous"
-        },
-        {
-            "name": "res",
-            "type": "http",
-            "direction": "out"
-        }
-    ],
-    "disabled": false
-}
+    "bindings": [{
+      "authLevel" : "anonymous",
+      "type"      : "httpTrigger",
+      "direction" : "in",
+      "name"      : "req",
+      "route"     : "{*segments}"
+    }, {
+      "type"      : "http",
+      "direction" : "out",
+      "name"      : "res"
+    }]
+  }
