@@ -1,7 +1,5 @@
-module.exports = function(context, req) {
-    context.res = {
-        // status defaults to 200 */
-        body: "Express JS Hello World App!!!"
-    };
-    context.done();
-};
+module.exports = function(context) {
+    context.log(JSON.stringify(context));
+    context.res = { status: 200, body: 'Hello World' };
+    context.done(null);
+}
